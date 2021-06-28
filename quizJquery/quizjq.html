@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Quiz lista de questões</title>
+		<meta charset="utf-8">
+		<style>
+		ol.answer {list-style-type:lower-latin;}
+		</style>
+		 <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	</head>
+	<body>
+		<h1>Questionário</h1>
+		<button type="button" id="loadQuiz">Carregar questões</button>
+		<br>
+		<div id="demo"></div>
+
+		<script type="text/javascript">
+		
+         $(document).ready(function() {
+           
+            $("#loadQuiz").click(function(event){
+               $.getJSON('quiz.json', function(data) {
+               	//carrega questoes
+               	let questions = data.quiz.question;
+               	//monta o questionario
+                  let questionario=$("<ol>");
+               	for (i=0; i < questions.length; i++){
+               		//monta lista de  questoes
+               		questoes = $("<li>").html(questions[i].text);
+                     questoes.addClass("question");
+               		//monta sublista de opcoes
+               		alternativas=$("<ol>");
+               		let answers =  questions[i].answer;
+               		for(j=0;j<5;j++){
+               			opcao=$("<li>").html(answers[j].__text);
+                        opcao.addClass("answer");
+               			alternativas.append(opcao);
+               		}              		
+               		questoes.append(alternativas);
+                     questionario.append(questoes);
+               		//mostra na pagina
+					       $("#demo").append(questionario);
+               	}  
+               });
+
+            });
+     
+  			});
+	</script>
+	</body>
+</html>
