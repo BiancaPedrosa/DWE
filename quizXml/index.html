@@ -1,0 +1,24 @@
+<!Doctype HTML>
+<html>
+	<head>
+		<title>Quiz lista de questões</title>
+		<meta charset="utf-8">
+		<link href="css/estilo.css" rel="stylesheet">
+	</head>
+	<body onload="loadDoc()">
+		<h1>Questionário</h1>
+		<h3 id = "result"> </h3>
+		<nav class="pagination">
+			<a id="link1" href="#question1" onclick=exibirQuestao(1)>1</a>
+			<a id="link2" href="#question2" onclick=exibirQuestao(2)>2</a>
+			<a id="link3" href="#question3" onclick=exibirQuestao(3)>3</a>
+		</nav>
+		<form id="formQuestionary">	
+			<button type="button" onclick="avalia()">Avaliar questões</button>
+		</form>
+			
+		<script type="text/javascript" src="js/loadXMLDOM.js"></script>
+		<script type="text/javascript" src="js/avaliaDOM.js"></script>
+		<script type="text/javascript" src="js/pagination.js"></script>
+	</body>
+</html>

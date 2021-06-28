@@ -1,0 +1,48 @@
+<quiz>  
+  <!-- question: 1 -->
+  <question id="1">
+    <text>Sobre ID e CLASS não é correto afirmar:</text>
+	<answer value="0">Servem para identificar e agrupar elementos</answer>
+	<answer value="0">Servem para aplicar estilos CSS</answer>
+	<answer value="0">Id são únicos e Class podem se repetir</answer>
+	<answer value="0">Em Javascript os ID são utilizados ...</answer>
+	<answer value="1">Usamos IDs para a criação de links do tipo âncora</answer>
+  </question>
+  
+  <!-- question: 2-->
+  <question id="2">
+    <text>
+	A pseudo-classe utilizada para indicar o estado de um link quando o ponteiro 
+	</text>
+	<answer value="1">hover</answer>
+	<answer value="0">active</answer>
+	<answer value="0">link</answer>
+	<answer value="0">mouseout </answer>
+	<answer value="0">mouseover</answer>
+  </question>
+
+	<!-- question: 3  -->
+	  <question id="3">
+		<text>
+			Observe o documento CSS....Ao abrir o documento em um navegador, a palavra Texto será exibida na cor
+		</text>
+		<answer value="1">verde</answer>
+		<answer value="0">roxa</answer>
+		<answer value="0">azul</answer>
+		<answer value="0">branca</answer>
+		<answer value="0">vermelha</answer>
+	  </question>
+
+	<!-- question: 4  -->
+	  <question id="4">
+		<text>Através do CSS3,assinale a alternativa que transforma em itálico o texto de um parágrafo</text>
+		<answers>
+			<answer value="0">font-decoration</answer>
+			<answer value="0">font-style</answer>
+			<answer value="1">text-decoration</answer>
+			<answer value="0">text-style</answer>
+			<answer value="0">text-align</answer>
+		</answers>
+	  </question>
+
+</quiz>
